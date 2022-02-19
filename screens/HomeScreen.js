@@ -15,9 +15,8 @@ export default class HomeScreen extends Component{
   }
 
   getWord=(word)=>{
-    var searchKeyword=word.toLowerCase()
-    var url;
-    url = "https://rupinwhitehatjr.github.io/dictionary/searchKeyword.json"
+    var searchKeyword=word.toLowerCase() 
+    var url = "https://rupinwhitehatjr.github.io/dictionary/"+searchKeyword+".json"
     
     
 
@@ -74,47 +73,12 @@ export default class HomeScreen extends Component{
         />
         <View style={styles.inputBoxContainer}>
       
-        <Text 
-           onChangeText={text => {
-              this.setState({
-                text: text,
-                isSearchPressed: false,
-                word  : "Loading...",
-                lexicalCategory :'',
-                examples : [],
-                definition : ""
-              });
-           }}
-        />
+       
   
-     {/*   <input 
-           onChangeText={text => {
-              this.setState({
-                text: text,
-                isSearchPressed: false,
-                word  : "Loading...",
-                lexicalCategory :'',
-                examples : [],
-                definition : ""
-              });
-           }}
-        /> 
-        */}
-      {/*
-      <TouchableOpacity 
-           onChangeText={text => {
-              this.setState({
-                text: text,
-                isSearchPressed: false,
-                word  : "Loading...",
-                lexicalCategory :'',
-                examples : [],
-                definition : ""
-              });
-           }}
-        /> 
-      */}
-      {/*
+    
+      
+      
+      
           <TextInput
             style={styles.inputBox}
             onChangeText={text => {
@@ -129,7 +93,7 @@ export default class HomeScreen extends Component{
             }}
             value={this.state.text}
           />
-  ``````*/}
+  
           <TouchableOpacity
             style={styles.searchButton}
             onPress={() => {
